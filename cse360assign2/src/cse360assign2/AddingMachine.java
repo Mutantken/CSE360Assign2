@@ -16,6 +16,7 @@ package cse360assign2;
 public class AddingMachine {
 
 	private int total;
+	private String string;
 	
 	/**
 	 * This is a constructor used for initializing the variable total.
@@ -23,6 +24,7 @@ public class AddingMachine {
 	
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
+		string = "0 ";
 	}
 	
 	/**
@@ -32,7 +34,7 @@ public class AddingMachine {
 	 */
 	
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -42,7 +44,8 @@ public class AddingMachine {
 	 */
 	
 	public void add (int value) {
-		
+		total += value;
+		string = string + "+ " + String.valueOf(value) + " ";
 	}
 	
 	/**
@@ -51,7 +54,8 @@ public class AddingMachine {
 	 */
 	
 	public void subtract (int value) {
-		
+		total -= value;
+		string = string + "- " + String.valueOf(value) + " ";
 	}
 		
 	/**
@@ -59,9 +63,9 @@ public class AddingMachine {
 	 * returns the text for all actions and numbers done in the calculator.
 	 * @return returns the string that contains operations and numbers from actions by user.
 	 */
-	
+
 	public String toString () {
-		return "";
+		return string;
 	}
 
 	/**
